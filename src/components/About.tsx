@@ -26,7 +26,7 @@ export default function About() {
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-gray-100 px-4 py-2 rounded-full">
-                <span className="text-gray-700">🎓 B.S. in Computer Science</span>
+                <span className="text-gray-700">🎓 B.S. in Electrical Engineering</span>
               </div>
               <div className="bg-gray-100 px-4 py-2 rounded-full">
                 <span className="text-gray-700">💼 5 Years Experience</span>
