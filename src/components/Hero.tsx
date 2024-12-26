@@ -13,11 +13,11 @@ export default function Hero() {
             Frontend Developer | UI/UX Enthusiast
           </p>
           <div className="flex justify-center space-x-4 mb-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/PranayL07" target="_blank" rel="noopener noreferrer" 
                className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/pranay-lamture-3036051b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"
                className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
               <Linkedin size={24} />
             </a>
