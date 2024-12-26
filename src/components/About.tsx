@@ -8,7 +8,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="aspect-square rounded-lg overflow-hidden">
             <img
-              src="https://img.freepik.com/free-vector/developers-use-software-multiple-devices-cross-platform-software-multi-platform-platform-independent-software-concept_335657-1816.jpg?t=st=1735215619~exp=1735219219~hmac=1ee8723754ce565a62b84b04e6a66fdb93e212027ca23e85ded2fc81606f6ed6&w=1060"
+              src="https://img.freepik.com/free-vector/responsive-concept-illustration_114360-654.jpg?t=st=1735215962~exp=1735219562~hmac=71a188ee386bbea62f6fb1df90b33817b592dc10bd12a5110e838ef6babe54a0&w=740"
               alt="Profile"
               className="w-full h-full object-cover"
             />
