@@ -1,9 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_ha9lz5q', // Replace with your EmailJS service ID
+        'template_ddahgjz', // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Pranay Lamture',
+        },
+        'RzS07eZgWrmwI3Roa' // Replace with your EmailJS public key
+      );
+
+      toast.success('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
+      <Toaster position="top-right" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
         <div className="grid md:grid-cols-2 gap-12">
@@ -24,7 +67,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                 Name
@@ -32,6 +75,9 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your name"
               />
@@ -43,6 +89,9 @@ export default function Contact() {
               <input
                 type="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your email"
               />
@@ -53,6 +102,9 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 rows={4}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your message"
@@ -60,9 +112,10 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              disabled={isSubmitting}
+              className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
