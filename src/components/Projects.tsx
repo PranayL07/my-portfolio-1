@@ -16,7 +16,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80',
     tags: ['HTML', 'CSS', 'UI Design'],
     githubUrl: 'https://github.com/PranayL07/LetsGrowMore2',
-    #liveUrl: 'https://example.com',
+    liveUrl: 'https://example.com',
   },
   {
     title: 'Payment Gateway Integration',
@@ -24,7 +24,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1547954575-855750c57bd3?auto=format&fit=crop&q=80',
     tags: ['HTML', 'CSS', 'API'],
     githubUrl: 'https://github.com/PranayL07/Web-Development-1',
-    #liveUrl: 'https://example.com',
+    liveUrl: 'https://example.com',
   },
   {
     title: 'Notes Taking Webapp',
@@ -32,7 +32,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
     tags: ['JavaScript', 'HTML', 'CSS'],
     githubUrl: 'https://github.com',
-    #liveUrl: 'https://example.com',
+    liveUrl: 'https://example.com',
   },
 ];
 
