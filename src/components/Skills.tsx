@@ -4,7 +4,7 @@ const skills = [
   { category: 'Frontend', items: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'UI Design'] },
   { category: 'Technical skills', items: ['Python', 'Linux', 'Ansible', 'SQL'] },
   { category: 'Tools', items: ['Dynatrace', 'JIRA', 'Azure', 'Figma'] },
-  { category: 'Soft Skills', items: ['Problem Solving', 'Communication', 'Team Leadership', 'Agile', 'Time Management] },
+  { category: 'Soft Skills', items: ['Problem Solving', 'Communication', 'Team Leadership', 'Agile', 'Time Management'] },
 ];
 
 export default function Skills() {
