@@ -8,7 +8,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="aspect-square rounded-lg overflow-hidden">
             <img
-              src="About me.png"
+              src="About_me.svg"
               alt="Profile"
               className="w-full h-full object-cover"
             />
