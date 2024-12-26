@@ -15,24 +15,17 @@ export default function About() {
           </div>
           <div>
             <p className="text-lg text-gray-600 mb-6">
-              I'm a passionate Full Stack Developer with 5 years of experience in building web applications.
-              I specialize in creating beautiful, functional, and user-friendly websites that help businesses
-              grow and succeed online.
+              I'm a passionate Frontend Developer and a UI/UX enthusiast.
+              I enjoy designing & creating beautiful, functional, and user-friendly websites.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              My journey in web development started when I built my first website in college. Since then,
+              My interest in web development started when I built my first website in college. Since then,
               I've worked with various technologies and frameworks, always staying up-to-date with the
               latest industry trends.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-gray-100 px-4 py-2 rounded-full">
-                <span className="text-gray-700">🎓 B.S. in Electrical Engineering</span>
-              </div>
-              <div className="bg-gray-100 px-4 py-2 rounded-full">
-                <span className="text-gray-700">💼 5 Years Experience</span>
-              </div>
-              <div className="bg-gray-100 px-4 py-2 rounded-full">
-                <span className="text-gray-700">🌍 Remote Worker</span>
+                <span className="text-gray-700">🎓 BE. in Electrical Engineering</span>
               </div>
             </div>
           </div>
